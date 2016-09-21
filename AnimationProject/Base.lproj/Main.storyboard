@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soccerball.png" translatesAutoresizingMaskIntoConstraints="NO" id="csy-ST-S2p" customClass="Ball">
+                                <rect key="frame" x="275" y="28" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3tD-Ri-S2N"/>
+                                    <constraint firstAttribute="width" constant="50" id="9d9-lD-lpV"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjz-1g-aPj">
+                                <rect key="frame" x="230" y="504" width="140" height="18"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="7kd-e7-iQw"/>
+                                    <constraint firstAttribute="width" constant="140" id="eZS-KC-7bX"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU LOSE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTy-0Y-reb">
+                                <rect key="frame" x="181" y="273" width="238.5" height="53.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="42"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efo-Qf-ohz">
+                                <rect key="frame" x="20" y="342" width="560" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvs-o8-FAG">
+                                <rect key="frame" x="225" y="550" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GZx-j4-GFp"/>
+                                    <constraint firstAttribute="width" constant="80" id="yQN-jc-3EX"/>
+                                </constraints>
+                                <state key="normal" title="    Start    ">
+                                    <color key="titleColor" red="0.99607843139999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yQN-jc-3EX"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pds-lg-uFQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qvs-o8-FAG" secondAttribute="bottom" constant="20" id="5Hn-na-Pix"/>
+                            <constraint firstItem="csy-ST-S2p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DGe-ub-fkG"/>
+                            <constraint firstItem="pTy-0Y-reb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HxO-cz-FZE"/>
+                            <constraint firstItem="Efo-Qf-ohz" firstAttribute="top" secondItem="pTy-0Y-reb" secondAttribute="bottom" constant="15.5" id="LSO-ur-3iF"/>
+                            <constraint firstItem="Yjz-1g-aPj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pxj-XG-F5q"/>
+                            <constraint firstItem="pTy-0Y-reb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eiK-Xc-MW3"/>
+                            <constraint firstItem="qvs-o8-FAG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gSc-qF-CYS"/>
+                            <constraint firstItem="Efo-Qf-ohz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lLk-JV-LOc"/>
+                            <constraint firstItem="csy-ST-S2p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q8n-bi-bEh"/>
+                            <constraint firstItem="Efo-Qf-ohz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s7l-T5-oJc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yjz-1g-aPj" secondAttribute="bottom" constant="78" id="yJa-35-p3A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ball" destination="csy-ST-S2p" id="bRv-4U-Ca3"/>
+                        <outlet property="bottomBar" destination="Yjz-1g-aPj" id="aTe-IH-yyE"/>
+                        <outlet property="finalScoreLabel" destination="Efo-Qf-ohz" id="aMQ-e5-Qis"/>
+                        <outlet property="loseLabel" destination="pTy-0Y-reb" id="K5w-5b-zo1"/>
+                        <outlet property="startButtonOutlet" destination="qvs-o8-FAG" id="Mww-Ux-FCB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="soccerball.png" width="2000" height="2000"/>
+    </resources>
+</document>
